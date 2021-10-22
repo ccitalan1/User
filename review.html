@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>Submit A Review</title>
+        <style>
+            h1,h3{
+                text-align: center;
+            }
+            
+        </style>
+
+    </head>
+    <body>
+        <h1> Submit a review below </h1>
+        <h3> Choose one option from each dropdown</h3>
+        
+        <!-- brand drop down -->
+        <label for = "brand_options"> Choose the brand you want to review:</label>
+        <select name="brands" id ="brands">
+            <option value ="Levis"> Levis </option> 
+            <option value ="Madewell"> Madewell </option>
+            <option value ="Wrangler"> Wrangler </option>
+            <option value ="Everlane"> Everlane </option>
+            <option value ="American Eagle"> American Eagle </option>
+
+        </select>
+
+        <!-- womens size drop down menu -->
+        <label for = "size"> Choose the womens size purchased:</label>
+        <select name="size_options_womens" id ="size_options_womens">
+            <option value ="23"> 23 </option> 
+            <option value ="24"> 24 </option>
+            <option value ="25"> 25 </option>
+            <option value ="26"> 26 </option>
+            <option value ="27"> 27 </option>
+            <option value ="28"> 28 </option>
+            <option value ="29"> 29 </option>
+            <option value ="30"> 30 </option>
+            <option value ="32"> 32 </option>
+            <option value ="34"> 34 </option>
+            <option value ="36"> 36 </option>
+        </select>
+        
+        <!-- mens size drop down menu -->
+        <label for = "size"> Choose the mens size purchased:</label>
+        <select name="size_options_womens" id ="size_options_womens">
+            <option value ="XS"> 30x30 </option> 
+            <option value ="S"> 30x32 </option>
+            <option value ="M">32x30 </option>
+            <option value ="L"> 32x32 </option>
+            <option value ="XL "> 32x34 </option>
+            <option value ="XXL "> 32x36 </option>
+            <option value ="0 "> 34x30 </option>
+            <option value ="2"> 40x30 </option>
+            <option value ="4"> 44x34 </option>
+        </select>
+
+        <!-- rating drop down menu-->
+        <label for = "rating"> Choose the rating you want to give the fit:</label>
+        <select name="rating_fit" id ="rating_fit">
+            <option value ="poor1"> Poor: too big / too small </option> 
+            <option value ="poor2"> Poor: too long / too short </option>
+            <option value ="ok"> Average </option>
+            <option value ="perfect"> Great fit  </option>
+        </select>
+        
+
+       <a href="submission.html">
+            <button> Submit review</button>
+        </a>
+        
+    </body>
+</html>
