@@ -15,8 +15,10 @@
         <h1> Submit a review below </h1>
         <h3> Choose one option from each dropdown</h3>
         
+        <!-- <script src = "review.js"></script> -->
+        
         <!-- brand drop down -->
-        <label for = "brand_options"> Choose the brand you want to review:</label>
+        <label> Choose the brand you want to review:</label>
         <select name="brands" id ="brands">
             <option value ="Levis"> Levis </option> 
             <option value ="Madewell"> Madewell </option>
@@ -26,7 +28,7 @@
 
         </select>
 
-        <!-- womens size drop down menu -->
+       <!--  womens size drop down menu -->
         <label for = "size"> Choose the womens size purchased:</label>
         <select name="size_options_womens" id ="size_options_womens">
             <option value ="23"> 23 </option> 
@@ -40,11 +42,11 @@
             <option value ="32"> 32 </option>
             <option value ="34"> 34 </option>
             <option value ="36"> 36 </option>
-        </select>
+        </select> 
         
         <!-- mens size drop down menu -->
         <label for = "size"> Choose the mens size purchased:</label>
-        <select name="size_options_womens" id ="size_options_womens">
+        <select name="size_options_womens" id ="size_options_mens">
             <option value ="XS"> 30x30 </option> 
             <option value ="S"> 30x32 </option>
             <option value ="M">32x30 </option>
@@ -57,18 +59,68 @@
         </select>
 
         <!-- rating drop down menu-->
-        <label for = "rating"> Choose the rating you want to give the fit:</label>
+         <label>Choose the rating you want to give the fit:</label>
         <select name="rating_fit" id ="rating_fit">
             <option value ="poor1"> Poor: too big / too small </option> 
             <option value ="poor2"> Poor: too long / too short </option>
             <option value ="ok"> Average </option>
             <option value ="perfect"> Great fit  </option>
-        </select>
+        </select>  
         
 
-       <a href="submission.html">
-            <button> Submit review</button>
-        </a>
+        <form action="uploadTest.php" method = "POST" enctype = "multipart/form-data">
+            Select Image To Upload With Your Review:
+            <input type = "file" name = "file">
+            <window class="open"></window>
         
+        </form>
+        <br>
+
+        <button type = "button" onclick = "display()">display selection</button>
+        <br>
+        <br>
+
+        Here's what you submitted:
+        <br>
+        Brand: 
+        <span class = "brandoutput"></span>
+        <br>
+        Womens size purchased: 
+        <span class = "wsizeoutput"></span>
+        <br>
+        Mens size purchased:
+        <span class = "msizeoutput"></span>
+        <br>
+        Overall rating:
+        <span class = "ratingoutput"></span>
+ 
+       <!-- <a href="submission.html"> -->
+            <script>
+                function display(){
+
+
+                
+                    selectbrand = document. querySelector('#brands');
+                    brandoutput = selectbrand.value;
+  
+                    document.querySelector('.brandoutput').textContent = brandoutput;
+                    
+                    selectwsize = document. querySelector('#size_options_womens');
+                    wsizeoutput = selectwsize.value;
+  
+                    document.querySelector('.wsizeoutput').textContent = wsizeoutput;
+                    
+                    selectmsize = document. querySelector('#size_options_mens');
+                    msizeoutput = selectmsize.value;
+  
+                    document.querySelector('.msizeoutput').textContent = msizeoutput;
+                    
+                    selectrating = document. querySelector('#rating_fit');
+                    ratingoutput = selectrating.value;
+
+                    document.querySelector('.ratingoutput').textContent = ratingoutput;
+                }
+
+            </script>
     </body>
 </html>
